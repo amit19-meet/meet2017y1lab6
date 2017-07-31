@@ -20,11 +20,45 @@ import turtle #python needs this to use all the turtle functions
 #triangle.goto(200,200)
 #triangle.stamp()
 #triangle.goto(100,50)
+UP_ARROW = "Up" #these are the codes that correspond to the keys
+LEFT_ARROW = "Left"
+DOWN_ARROW = "Down"
+RIGHT_ARROW = "Right"
+SPACEBAR = "space"
+
 UP = 0
 LEFT = 1
 DOWN = 2
 RIGHT = 3
 direction = UP
+
+def up():
+    global direction
+    print("you pressed Up!")
+
+def down():
+    global direction
+    direction = DOWN
+    print("you pressed Down!")
+
+def left():
+    global direction
+    direction = LEFT
+    print("you pressed Left!")
+
+def right():
+    global direction
+    direction = RIGHT
+    print("you pressed Right!")
+
+#these lines of code calls the right functions when you press keys
+turtle.onkeypress(up, UP_ARROW) #move up when you press up
+turtle.onkeypress(down, DOWN_ARROW)
+turtle.onkeypress(left, LEFT_ARROW)
+turtle.onkeypress(right, RIGHT_ARROW)
+turtle.listen()
+
+    
 
 
 
